@@ -55,12 +55,14 @@ VCC       3V3
 GND       GND
 SCK       GP18  (SPI0 SCK)
 SDI/MOSI  GP19  (SPI0 TX)
-SDO/MISO  GP16  (SPI0 RX, unused but configured)
 CS        GP17
 DC/RS     GP20
 RESET     GP21
 LED       GP22  (PWM dimmable)
 ```
+
+The display's SDO/MISO pin is unused — the driver is write-only. Leave
+that wire off; GP16 stays free for your own use.
 
 ## Build
 

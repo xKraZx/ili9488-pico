@@ -93,7 +93,6 @@ void ili9488_init(void) {
     spi_set_format(ILI9488_SPI, 8, SPI_CPOL_0, SPI_CPHA_0, SPI_MSB_FIRST);
     gpio_set_function(ILI9488_PIN_SCK, GPIO_FUNC_SPI);
     gpio_set_function(ILI9488_PIN_MOSI, GPIO_FUNC_SPI);
-    gpio_set_function(ILI9488_PIN_MISO, GPIO_FUNC_SPI);
 
     gpio_init(ILI9488_PIN_CS);  gpio_set_dir(ILI9488_PIN_CS, GPIO_OUT);  gpio_put(ILI9488_PIN_CS, 1);
     gpio_init(ILI9488_PIN_DC);  gpio_set_dir(ILI9488_PIN_DC, GPIO_OUT);  gpio_put(ILI9488_PIN_DC, 1);

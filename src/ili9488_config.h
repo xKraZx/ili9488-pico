@@ -7,7 +7,6 @@
 
 #define ILI9488_PIN_SCK     18
 #define ILI9488_PIN_MOSI    19
-#define ILI9488_PIN_MISO    16
 #define ILI9488_PIN_CS      17
 #define ILI9488_PIN_DC      20
 #define ILI9488_PIN_RST     21
