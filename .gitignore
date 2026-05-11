@@ -1,0 +1,14 @@
+build/
+docs/
+*.elf
+*.uf2
+*.bin
+*.hex
+*.dis
+*.map
+*.o
+*.d
+.vscode/
+.idea/
+.cache/
+compile_commands.json
