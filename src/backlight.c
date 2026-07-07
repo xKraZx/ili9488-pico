@@ -10,6 +10,7 @@
 
 static uint slice;
 static uint chan;
+static uint16_t cur;
 
 void backlight_init(void) {
     gpio_set_function(ILI9488_PIN_LED, GPIO_FUNC_PWM);
@@ -29,11 +30,15 @@ void backlight_init(void) {
 }
 
 void backlight_set_raw(uint16_t level) {
+    cur = level;
     pwm_set_chan_level(slice, chan, level);
 }
 
 void backlight_set(uint8_t percent) {
     if (percent > 100) percent = 100;
-    uint32_t level = ((uint32_t)percent * BL_WRAP) / 100u;
-    pwm_set_chan_level(slice, chan, (uint16_t)level);
+    backlight_set_raw((uint16_t)(((uint32_t)percent * BL_WRAP) / 100u));
+}
+
+uint16_t backlight_get_raw(void) {
+    return cur;
 }
