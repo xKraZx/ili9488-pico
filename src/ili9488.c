@@ -1,5 +1,4 @@
 #include "ili9488.h"
-#include "ili9488_config.h"
 
 #include "pico/stdlib.h"
 #include "hardware/spi.h"

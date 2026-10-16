@@ -1,9 +1,10 @@
+#include "gfx.h"
+
 #include <string.h>
 #include <stdbool.h>
 
-#include "gfx.h"
+#include "pico/stdlib.h"
 #include "ili9488.h"
-#include "ili9488_config.h"
 
 #define MAX_RUN_W ILI9488_PANEL_H
 #define PIX_BYTES_PER_GLYPH_ROW (GFX_FONT_W * 2)
