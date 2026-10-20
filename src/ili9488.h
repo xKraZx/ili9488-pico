@@ -3,6 +3,10 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define RGB565(r, g, b) ((uint16_t)((((r) & 0xF8) << 8) | (((g) & 0xFC) << 3) | ((b) >> 3)))
 
 #define COLOR_BLACK   0x0000
@@ -28,3 +32,7 @@ uint32_t ili9488_spi_baudrate(void);
 void ili9488_pixel(uint16_t x, uint16_t y, uint16_t color);
 void ili9488_fill_rect(uint16_t x, uint16_t y, uint16_t w, uint16_t h, uint16_t color);
 void ili9488_clear(uint16_t color);
+
+#ifdef __cplusplus
+}
+#endif
